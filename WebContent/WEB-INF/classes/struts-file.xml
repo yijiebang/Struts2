@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <constant name="struts.devMode" value="true" />
+   <constant name="struts.multipart.maxSize" value="1000000" /><!-- 可接受的上传文件的最大值（以字节为单位），默认值为250M。  -->
+     
+  <package name="file" extends="struts-default">
+      <!-- 文件操作首頁 -->
+      <action name="file">
+            <result >/uploadFile.jsp</result>
+      </action>
+      <!-- 文件操作之後的映射 -->
+       <action name="upload"    class="com.yjb.struts2.action.file.UploadFile"   method="execute">
+         <result name="success">/jsp/UploadSuccess.jsp</result>
+         <result name="error">/jsp/error.jsp</result>
+      </action>
+    </package>
+  </struts>

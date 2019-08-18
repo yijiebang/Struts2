@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+      
+  <package name="login" extends="struts-default">
+      <!-- 文件操作首頁 -->
+      <action name="login">
+            <result >/login.jsp</result>
+      </action>
+      <!-- 文件操作之後的映射 -->
+       <action name="loginaction"    class="com.yjb.struts2.action.jdbc.LoginAction"   method="execute">
+         <result name="success">/jsp/LoginSuccess.jsp</result>
+         <result name="error">/jsp/error.jsp</result>
+      </action>
+    </package>
+  </struts>

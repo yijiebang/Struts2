@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <constant name="struts.devMode" value="true" />
+   <package name="/" extends="struts-default">
+   <interceptors>
+   <interceptor name="myintercept" class="com.yjb.struts2.action.intercept.MyInterceptor"/><!-- 引用攔截器 -->
+   </interceptors>
+      <action name="index">
+            <result>/hello.jsp</result>
+      </action>
+ 	  <action name="hello" class="com.yjb.struts2.action.HelloWorldAction" method="execute">
+	     <interceptor-ref name="params"/>     <!--设置action上的请求参数。    -->
+         <interceptor-ref name="timer" />     <!--以action执行时间的形式提供简单的分析信息。  -->
+         <interceptor-ref name="myintercept"/><!-- 调用自定义的拦截器 ，做一些预处理和一些后处理。-->
+ 			<result name="success">/jsp/HelloWorldSuccess.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+		 
+    </package>
+    <!-- 文件处理的xml -->
+    <include file="struts-file.xml"/>
+    <!-- 访问数据库，登录校验 -->
+      <include file="struts-jdbc.xml"/>
+ </struts>
