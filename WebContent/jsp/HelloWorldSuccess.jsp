@@ -5,8 +5,9 @@
 <title>Hello World</title>
 </head>
 <body>
-     Entered value : <s:property value="name"/><br/>
-   Value of key 1 : <s:property value="key1" /><br/>
-   Value of key 2 : <s:property value="key2" /> <br/>
+<h1>hello success</h1>
+    前面传的值 : <s:property value="name"/><br/>
+  后面action带过来的 key 1 : <s:property value="key1" /><br/>
+ 后面action带过来的 key 2 : <s:property value="key2" /> <br/>
 </body>
 </html>

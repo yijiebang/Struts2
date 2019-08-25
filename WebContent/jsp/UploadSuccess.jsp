@@ -5,6 +5,8 @@
 <title>File Upload Success</title>
 </head>
 <body>
-You have successfully uploaded <s:property value="myFileFileName"/>
+文件上传成功了，<br/>
+ 文件名:<s:property value="myFileFileName"/><br/>
+存放位置:<s:property value="destPath"/>
 </body>
 </html>

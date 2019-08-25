@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
     <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
     <h1>Hello World From Struts2</h1>
-   <form action="hello">
-      <label for="name">Please enter your name</label><br/>
+   <form action="helloAction">
+      <label for="name">输入数据，传入action然后输出</label><br/>
       <input type="text" name="name"/>
       <input type="submit" value="Say Hello"/>
    </form>
